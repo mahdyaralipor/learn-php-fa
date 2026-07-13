@@ -1,0 +1,19 @@
+@import url('https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css');
+
+body, .book-menu, .book-page, .markdown {
+  font-family: "Vazirmatn", Tahoma, sans-serif;
+}
+
+// Keep code blocks LTR always, even in RTL pages
+.markdown pre,
+.markdown code,
+.highlight {
+  direction: ltr;
+  text-align: left;
+}
+
+// Fix menu border side for RTL
+.book-menu {
+  border-left: 1px solid var(--body-background);
+  border-right: none;
+}

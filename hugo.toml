@@ -1,7 +1,14 @@
 baseURL = 'https://mahdyaralipor.github.io/learn-php-fa/'
-languageCode = 'fa-ir'
 title = 'آموزش PHP از صفر'
 theme = 'hugo-book'
+
+[languages]
+  [languages.fa]
+    languageName = 'فارسی'
+    languageCode = 'fa-ir'
+    weight = 1
+    contentDir = 'content'
+    direction = 'rtl'
 
 [params]
   BookTheme = 'auto'
