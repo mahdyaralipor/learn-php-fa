@@ -1,0 +1,16 @@
+baseURL = 'https://mahdyaralipor.github.io/learn-php-fa/'
+languageCode = 'fa-ir'
+title = 'آموزش PHP از صفر'
+theme = 'hugo-book'
+
+[params]
+  BookTheme = 'auto'
+  BookToC = true
+  BookSection = 'lessons'
+  BookRepo = 'https://github.com/Mahdyaralipor/learn-php-fa'
+  BookEditPath = 'edit/main'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
