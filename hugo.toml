@@ -4,8 +4,8 @@ theme = 'hugo-book'
 
 [languages]
   [languages.fa]
-    languageName = 'فارسی'
-    languageCode = 'fa-ir'
+    label = 'فارسی'
+    locale = 'fa-ir'
     weight = 1
     contentDir = 'content'
     direction = 'rtl'

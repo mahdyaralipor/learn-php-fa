@@ -1,29 +1,53 @@
-# آموزش PHP از صفر (learn-php-fa)
+# آموزش PHP از صفر تا پیشرفته (learn-php-fa)
 
-سایت مستندات این مسیر یادگیری با Hugo و تم hugo-book ساخته شده.
+دورهٔ فارسی کامل PHP — از مبانی تا MVC، API، تست و دیپلوی — با Hugo و تم hugo-book.
 
 سایت زنده: https://mahdyaralipor.github.io/learn-php-fa/
 
-## راه‌اندازی روی گیت‌هاب پیجز
+## ساختار محتوا
 
-1. ریپو `learn-php-fa` رو بساز و این پوشه رو پوش کن (شامل پوشه‌ی مخفی `.github`).
-2. تو تنظیمات ریپو → Settings → Pages → بخش **Source** رو بذار روی **GitHub Actions** (نه Deploy from a branch).
-3. برو تب **Actions**، workflow به اسم "Deploy Hugo site to Pages" باید خودکار اجرا بشه.
-4. بعد از اتمام (چند دقیقه)، سایت روی آدرس بالا در دسترسه.
+```
+content/lessons/
+  01-fundamentals/ … 15-deployment/   # ۱۵ فصل تو در تو
+  projects/                           # ۶ پروژهٔ عملی
+examples/final-mvc/                   # اسکلت اپ MVC قابل‌اجرا
+```
 
-نسخه‌ی Hugo (0.158.0) داخل خود workflow (`.github/workflows/hugo.yml`) پین شده، پس همیشه دقیقاً همون نسخه‌ای که لوکال تست شده استفاده می‌شه — مشکل ناسازگاری تم پیش نمیاد.
+هر درس: **مفهوم → کد → اشتباهات رایج → تمرین**.
 
-## اضافه کردن درس جدید
+## راه‌اندازی سایت مستندات
 
-فایل جدید تو `content/lessons/` بساز، مثلاً `02-variables.md`:
+1. ریپو را پوش کن (شامل `.github`).
+2. Settings → Pages → Source = **GitHub Actions**.
+3. workflow «Deploy Hugo site to Pages» سایت را منتشر می‌کند.
+
+نسخهٔ Hugo در `.github/workflows/hugo.yml` پین شده است.
+
+### پیش‌نمایش لوکال
+
+```bash
+hugo server -D
+```
+
+## افزودن درس جدید
+
+داخل فصل مربوطه، مثلاً `content/lessons/03-functions/06-new-topic.md`:
 
 ```markdown
 ---
-title: "۲. متغیرها"
-weight: 3
+title: "موضوع جدید"
+weight: 6
 ---
 
 محتوا...
 ```
 
-بعد کامیت و پوش کن؛ سایت خودکار آپدیت می‌شه.
+## پروژهٔ نهایی MVC
+
+```bash
+cd examples/final-mvc
+composer install
+php -S localhost:8000 -t public
+```
+
+ورود پیش‌فرض: `admin` / `secret` (ببین `README.md` همان پوشه).
